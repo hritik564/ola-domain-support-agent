@@ -1,0 +1,23 @@
+Batch D governance demo
+Risk classification: MEDIUM
+Rationale:
+- Customer-support decisions affect user experience, and ticket escalation recommendations may affect operational handling.
+- The system cannot issue refunds or payments, modify accounts, or close tickets automatically; write access is intentionally absent.
+- A human/operator can review outcomes. Groundedness checks, PII masking, sanitized API errors, and audit logs reduce the remaining risk.
+
+Agent tool-access matrix:
+- Retrieval Agent: rag_lookup
+- Lookup Agent: ticket_status_lookup
+- Response Composer: no tools
+- Policy Compliance Reviewer: no tools
+- Final Editor: no tools
+
+Prohibited capabilities:
+- ticket mutation
+- refund or compensation issuance
+- account changes
+- external communication
+- billing or payment actions
+
+Least-autonomy check: passed.
+Reviewer/editor operational tools: none.

@@ -1,0 +1,27 @@
+[
+  {
+    "query_id": "Q1",
+    "query": "What is the response SLA for a P1 critical ticket?",
+    "relevant_document_ids": ["KB-002"]
+  },
+  {
+    "query_id": "Q2",
+    "query": "When should a repeated unresolved complaint be escalated?",
+    "relevant_document_ids": ["KB-003", "KB-007"]
+  },
+  {
+    "query_id": "Q3",
+    "query": "When can service credit be considered?",
+    "relevant_document_ids": ["KB-008"]
+  },
+  {
+    "query_id": "Q4",
+    "query": "What support is available outside standard business hours?",
+    "relevant_document_ids": ["KB-006"]
+  },
+  {
+    "query_id": "Q5",
+    "query": "How should customers be informed during a widespread outage?",
+    "relevant_document_ids": ["KB-011"]
+  }
+]

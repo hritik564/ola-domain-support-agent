@@ -1,0 +1,137 @@
+{
+  "evidence_source": "external_local_chromadb_validation",
+  "measured_inside_replit": false,
+  "distance_basis": "Derived as 1 - supplied top1_similarity; the external report listed similarities but not raw distances.",
+  "environment": {
+    "python": "3.13.6",
+    "chromadb": "1.5.9",
+    "sentence_transformers": "5.7.0",
+    "pytest": "8.4.2"
+  },
+  "strategies": {
+    "fixed": {
+      "measurements": [
+        {
+          "query_id": "Q1",
+          "query": "What is the response SLA for a P1 critical ticket?",
+          "expected_scope": "in_scope",
+          "expected_document_ids": ["KB-002"],
+          "top1_document_id": "KB-002",
+          "top1_chunk_id": "KB-002-fixed-000",
+          "top1_distance": 0.4448233842849731,
+          "top1_similarity": 0.5551766157150269
+        },
+        {
+          "query_id": "Q2",
+          "query": "When should a repeated unresolved complaint be escalated?",
+          "expected_scope": "in_scope",
+          "expected_document_ids": ["KB-007", "KB-003"],
+          "top1_document_id": "KB-007",
+          "top1_chunk_id": "KB-007-fixed-000",
+          "top1_distance": 0.2928664684295654,
+          "top1_similarity": 0.7071335315704346
+        },
+        {
+          "query_id": "Q3",
+          "query": "When can service credit be considered?",
+          "expected_scope": "in_scope",
+          "expected_document_ids": ["KB-008"],
+          "top1_document_id": "KB-008",
+          "top1_chunk_id": "KB-008-fixed-000",
+          "top1_distance": 0.3027361035346985,
+          "top1_similarity": 0.6972638964653015
+        },
+        {
+          "query_id": "OOS1",
+          "query": "Who won the FIFA World Cup?",
+          "expected_scope": "out_of_scope",
+          "expected_document_ids": [],
+          "top1_document_id": null,
+          "top1_chunk_id": null,
+          "top1_distance": 0.9032562375068665,
+          "top1_similarity": 0.09674376249313354
+        },
+        {
+          "query_id": "OOS2",
+          "query": "How do I bake a chocolate cake?",
+          "expected_scope": "out_of_scope",
+          "expected_document_ids": [],
+          "top1_document_id": null,
+          "top1_chunk_id": null,
+          "top1_distance": 0.9725623726844788,
+          "top1_similarity": 0.02743762731552124
+        }
+      ],
+      "threshold": {
+        "status": "separated",
+        "min_in_scope_similarity": 0.5551766157150269,
+        "max_out_of_scope_similarity": 0.09674376249313354,
+        "selected_threshold": 0.3259601891040802,
+        "formula": "(max_out_of_scope_similarity + min_in_scope_similarity) / 2"
+      }
+    },
+    "sentence": {
+      "measurements": [
+        {
+          "query_id": "Q1",
+          "query": "What is the response SLA for a P1 critical ticket?",
+          "expected_scope": "in_scope",
+          "expected_document_ids": ["KB-002"],
+          "top1_document_id": "KB-003",
+          "top1_chunk_id": "KB-003-sentence-000",
+          "top1_distance": 0.4237110614776611,
+          "top1_similarity": 0.5762889385223389
+        },
+        {
+          "query_id": "Q2",
+          "query": "When should a repeated unresolved complaint be escalated?",
+          "expected_scope": "in_scope",
+          "expected_document_ids": ["KB-007", "KB-003"],
+          "top1_document_id": "KB-007",
+          "top1_chunk_id": "KB-007-sentence-001",
+          "top1_distance": 0.3596492409706116,
+          "top1_similarity": 0.6403507590293884
+        },
+        {
+          "query_id": "Q3",
+          "query": "When can service credit be considered?",
+          "expected_scope": "in_scope",
+          "expected_document_ids": ["KB-008"],
+          "top1_document_id": "KB-008",
+          "top1_chunk_id": "KB-008-sentence-000",
+          "top1_distance": 0.2972310185432434,
+          "top1_similarity": 0.7027689814567566
+        },
+        {
+          "query_id": "OOS1",
+          "query": "Who won the FIFA World Cup?",
+          "expected_scope": "out_of_scope",
+          "expected_document_ids": [],
+          "top1_document_id": null,
+          "top1_chunk_id": null,
+          "top1_distance": 0.8977211713790894,
+          "top1_similarity": 0.10227882862091064
+        },
+        {
+          "query_id": "OOS2",
+          "query": "How do I bake a chocolate cake?",
+          "expected_scope": "out_of_scope",
+          "expected_document_ids": [],
+          "top1_document_id": null,
+          "top1_chunk_id": null,
+          "top1_distance": 0.97145015001297,
+          "top1_similarity": 0.02854984998703003
+        }
+      ],
+      "threshold": {
+        "status": "separated",
+        "min_in_scope_similarity": 0.5762889385223389,
+        "max_out_of_scope_similarity": 0.10227882862091064,
+        "selected_threshold": 0.33928388357162476,
+        "formula": "(max_out_of_scope_similarity + min_in_scope_similarity) / 2"
+      }
+    }
+  },
+  "threshold_method": "(max_out_of_scope_similarity + min_in_scope_similarity) / 2",
+  "production_strategy_selected": false
+}

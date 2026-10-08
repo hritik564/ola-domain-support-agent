@@ -1,0 +1,23 @@
+End-to-end support-agent evaluation
+Status: completed
+Cases: 15
+Passed: 15
+Failed: 0
+Blocked by unavailable dependency: 0
+Average scores: {"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+
+Q1: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q2: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q3: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q4: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q5: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q6: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q7: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q8: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q9: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q10: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q11: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q12: passed; route=policy; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q13: passed; route=fallback; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q14: passed; route=fallback; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}
+Q15: passed; route=ticket; scores={"accuracy": 1.0, "completeness": 1.0, "grounding": 1.0, "safety": 1.0}

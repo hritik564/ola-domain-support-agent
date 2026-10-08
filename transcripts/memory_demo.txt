@@ -1,0 +1,19 @@
+LangChain session-memory transcript — langchain-core 1.6.7
+
+Session A, turn 1: Check TKT-0007.
+Resolved ticket: TKT-0007
+
+Session A, turn 2: Should that ticket be escalated?
+Resolved ticket: TKT-0007
+
+Session B, turn 1: Should that ticket be escalated?
+Resolved ticket: None
+
+Stored message counts after those turns:
+- Session A: 4 messages
+- Session B: 2 messages
+
+The ticket reference is isolated by session ID. LangChain Core 1.6.7 emitted
+deprecation warnings for InMemoryChatMessageHistory and
+RunnableWithMessageHistory; those are the APIs explicitly preferred in the
+Batch B requirements.

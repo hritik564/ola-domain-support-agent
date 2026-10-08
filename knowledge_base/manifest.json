@@ -1,0 +1,74 @@
+[
+  {
+    "document_id": "KB-001",
+    "filename": "01_ticket_priority.md",
+    "title": "Ticket Priority Classification",
+    "topic": "ticket-priority classification rules"
+  },
+  {
+    "document_id": "KB-002",
+    "filename": "02_sla_by_severity.md",
+    "title": "SLA by Severity",
+    "topic": "response and resolution targets by severity"
+  },
+  {
+    "document_id": "KB-003",
+    "filename": "03_escalation_matrix.md",
+    "title": "Escalation Matrix",
+    "topic": "severity-based escalation paths"
+  },
+  {
+    "document_id": "KB-004",
+    "filename": "04_refund_compensation.md",
+    "title": "Refund and Compensation",
+    "topic": "refund eligibility and compensation documentation"
+  },
+  {
+    "document_id": "KB-005",
+    "filename": "05_communication_channels.md",
+    "title": "Customer Communication Channels",
+    "topic": "approved customer support channels"
+  },
+  {
+    "document_id": "KB-006",
+    "filename": "06_business_hours.md",
+    "title": "Business Hours and Holiday Support",
+    "topic": "support desk hours and holiday coverage"
+  },
+  {
+    "document_id": "KB-007",
+    "filename": "07_repeat_complaints.md",
+    "title": "Repeat Complaint Handling",
+    "topic": "identifying and handling repeat complaints"
+  },
+  {
+    "document_id": "KB-008",
+    "filename": "08_service_credit.md",
+    "title": "Service Credit",
+    "topic": "service credit eligibility and approval"
+  },
+  {
+    "document_id": "KB-009",
+    "filename": "09_feedback_collection.md",
+    "title": "Feedback Collection",
+    "topic": "customer satisfaction feedback after resolution"
+  },
+  {
+    "document_id": "KB-010",
+    "filename": "10_vip_customer_handling.md",
+    "title": "VIP Customer Handling",
+    "topic": "VIP support prioritisation and safeguards"
+  },
+  {
+    "document_id": "KB-011",
+    "filename": "11_outage_communication.md",
+    "title": "Outage Communication",
+    "topic": "communication during widespread outages"
+  },
+  {
+    "document_id": "KB-012",
+    "filename": "12_ticket_data_retention.md",
+    "title": "Ticket Data Retention",
+    "topic": "retention, access, and privacy for ticket records"
+  }
+]

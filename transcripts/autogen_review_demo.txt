@@ -1,0 +1,31 @@
+Batch D AutoGen review demo
+Runtime: AutoGen AgentChat RoundRobinGroupChat with ReplayChatCompletionClient.
+External model/API calls: none.
+Operational tools available to either reviewer role: none.
+
+SCENARIO 1 — APPROVED DRAFT, RETURNED UNCHANGED
+Evidence IDs: KB-002
+Draft: For P1, the initial response is due within 15 minutes and the target resolution time is within 4 hours.
+Reviewer decision: approve
+Editor decision: return the draft unchanged
+approved: true
+Reviewer count: 2
+Turn count: 2
+revised: false
+Final answer: For P1, the initial response is due within 15 minutes and the target resolution time is within 4 hours.
+Decision: Returned the approved draft unchanged.
+
+SCENARIO 2 — UNSUPPORTED DRAFT, MINIMUM EVIDENCE-BASED CORRECTION
+Evidence IDs: KB-002
+Draft: P1 tickets are resolved within 30 minutes and customers automatically receive compensation.
+Reviewer decision: reject
+Editor decision: replace unsupported claims with the exact evidence-supported answer
+approved: false
+Reviewer count: 2
+Turn count: 2
+revised: true
+Final answer: For P1, the initial response is due within 15 minutes and the target resolution time is within 4 hours.
+Decision: Applied the minimum correction by returning the evidence-supported answer.
+
+Knowledge base mutation: none.
+Prompt/system instructions printed: none.

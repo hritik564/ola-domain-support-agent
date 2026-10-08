@@ -1,0 +1,255 @@
+{
+  "status": "completed_external_validation",
+  "measurement_source": "User-supplied external validation using real ChromaDB",
+  "measured_inside_replit": false,
+  "top_k": 3,
+  "production_top_k": 5,
+  "query_count": 5,
+  "retrieval_identity_detail_status": "not_provided_in_external_validation_summary",
+  "retrieval_identity_detail_note": "The supplied validation contained per-query precision and recall arithmetic and aggregates, but not raw chunk IDs or parent document ID lists. Those identity fields are null rather than inferred.",
+  "queries": [
+    {
+      "query_id": "Q1",
+      "query": "What is the response SLA for a P1 critical ticket?",
+      "relevant_document_ids": ["KB-002"]
+    },
+    {
+      "query_id": "Q2",
+      "query": "When should a repeated unresolved complaint be escalated?",
+      "relevant_document_ids": ["KB-003", "KB-007"]
+    },
+    {
+      "query_id": "Q3",
+      "query": "When can service credit be considered?",
+      "relevant_document_ids": ["KB-008"]
+    },
+    {
+      "query_id": "Q4",
+      "query": "What support is available outside standard business hours?",
+      "relevant_document_ids": ["KB-006"]
+    },
+    {
+      "query_id": "Q5",
+      "query": "How should customers be informed during a widespread outage?",
+      "relevant_document_ids": ["KB-011"]
+    }
+  ],
+  "strategies": {
+    "fixed": {
+      "status": "completed_external_validation",
+      "per_query": [
+        {
+          "query_id": "Q1",
+          "query": "What is the response SLA for a P1 critical ticket?",
+          "strategy": "fixed",
+          "relevant_document_ids": ["KB-002"],
+          "raw_retrieved_chunk_ids": null,
+          "retrieved_parent_document_ids_before_dedup": null,
+          "unique_retrieved_parent_document_ids": null,
+          "true_positive_document_ids": null,
+          "retrieval_identity_detail_status": "not_provided_in_external_validation_summary",
+          "true_positives": 1,
+          "precision_numerator": 1,
+          "precision_denominator": 3,
+          "precision": 0.3333333333333333,
+          "recall_numerator": 1,
+          "recall_denominator": 1,
+          "recall": 1.0
+        },
+        {
+          "query_id": "Q2",
+          "query": "When should a repeated unresolved complaint be escalated?",
+          "strategy": "fixed",
+          "relevant_document_ids": ["KB-003", "KB-007"],
+          "raw_retrieved_chunk_ids": null,
+          "retrieved_parent_document_ids_before_dedup": null,
+          "unique_retrieved_parent_document_ids": null,
+          "true_positive_document_ids": null,
+          "retrieval_identity_detail_status": "not_provided_in_external_validation_summary",
+          "true_positives": 2,
+          "precision_numerator": 2,
+          "precision_denominator": 3,
+          "precision": 0.6666666666666666,
+          "recall_numerator": 2,
+          "recall_denominator": 2,
+          "recall": 1.0
+        },
+        {
+          "query_id": "Q3",
+          "query": "When can service credit be considered?",
+          "strategy": "fixed",
+          "relevant_document_ids": ["KB-008"],
+          "raw_retrieved_chunk_ids": null,
+          "retrieved_parent_document_ids_before_dedup": null,
+          "unique_retrieved_parent_document_ids": null,
+          "true_positive_document_ids": null,
+          "retrieval_identity_detail_status": "not_provided_in_external_validation_summary",
+          "true_positives": 1,
+          "precision_numerator": 1,
+          "precision_denominator": 3,
+          "precision": 0.3333333333333333,
+          "recall_numerator": 1,
+          "recall_denominator": 1,
+          "recall": 1.0
+        },
+        {
+          "query_id": "Q4",
+          "query": "What support is available outside standard business hours?",
+          "strategy": "fixed",
+          "relevant_document_ids": ["KB-006"],
+          "raw_retrieved_chunk_ids": null,
+          "retrieved_parent_document_ids_before_dedup": null,
+          "unique_retrieved_parent_document_ids": null,
+          "true_positive_document_ids": null,
+          "retrieval_identity_detail_status": "not_provided_in_external_validation_summary",
+          "true_positives": 1,
+          "precision_numerator": 1,
+          "precision_denominator": 3,
+          "precision": 0.3333333333333333,
+          "recall_numerator": 1,
+          "recall_denominator": 1,
+          "recall": 1.0
+        },
+        {
+          "query_id": "Q5",
+          "query": "How should customers be informed during a widespread outage?",
+          "strategy": "fixed",
+          "relevant_document_ids": ["KB-011"],
+          "raw_retrieved_chunk_ids": null,
+          "retrieved_parent_document_ids_before_dedup": null,
+          "unique_retrieved_parent_document_ids": null,
+          "true_positive_document_ids": null,
+          "retrieval_identity_detail_status": "not_provided_in_external_validation_summary",
+          "true_positives": 1,
+          "precision_numerator": 1,
+          "precision_denominator": 3,
+          "precision": 0.3333333333333333,
+          "recall_numerator": 1,
+          "recall_denominator": 1,
+          "recall": 1.0
+        }
+      ],
+      "aggregate": {
+        "mean_precision": 0.4,
+        "mean_recall": 1.0
+      },
+      "critical_rank_one_hits": 2,
+      "irrelevant_parent_document_count": 9
+    },
+    "sentence": {
+      "status": "completed_external_validation",
+      "per_query": [
+        {
+          "query_id": "Q1",
+          "query": "What is the response SLA for a P1 critical ticket?",
+          "strategy": "sentence",
+          "relevant_document_ids": ["KB-002"],
+          "raw_retrieved_chunk_ids": null,
+          "retrieved_parent_document_ids_before_dedup": null,
+          "unique_retrieved_parent_document_ids": null,
+          "true_positive_document_ids": null,
+          "retrieval_identity_detail_status": "not_provided_in_external_validation_summary",
+          "true_positives": 1,
+          "precision_numerator": 1,
+          "precision_denominator": 2,
+          "precision": 0.5,
+          "recall_numerator": 1,
+          "recall_denominator": 1,
+          "recall": 1.0
+        },
+        {
+          "query_id": "Q2",
+          "query": "When should a repeated unresolved complaint be escalated?",
+          "strategy": "sentence",
+          "relevant_document_ids": ["KB-003", "KB-007"],
+          "raw_retrieved_chunk_ids": null,
+          "retrieved_parent_document_ids_before_dedup": null,
+          "unique_retrieved_parent_document_ids": null,
+          "true_positive_document_ids": null,
+          "retrieval_identity_detail_status": "not_provided_in_external_validation_summary",
+          "true_positives": 2,
+          "precision_numerator": 2,
+          "precision_denominator": 2,
+          "precision": 1.0,
+          "recall_numerator": 2,
+          "recall_denominator": 2,
+          "recall": 1.0
+        },
+        {
+          "query_id": "Q3",
+          "query": "When can service credit be considered?",
+          "strategy": "sentence",
+          "relevant_document_ids": ["KB-008"],
+          "raw_retrieved_chunk_ids": null,
+          "retrieved_parent_document_ids_before_dedup": null,
+          "unique_retrieved_parent_document_ids": null,
+          "true_positive_document_ids": null,
+          "retrieval_identity_detail_status": "not_provided_in_external_validation_summary",
+          "true_positives": 1,
+          "precision_numerator": 1,
+          "precision_denominator": 2,
+          "precision": 0.5,
+          "recall_numerator": 1,
+          "recall_denominator": 1,
+          "recall": 1.0
+        },
+        {
+          "query_id": "Q4",
+          "query": "What support is available outside standard business hours?",
+          "strategy": "sentence",
+          "relevant_document_ids": ["KB-006"],
+          "raw_retrieved_chunk_ids": null,
+          "retrieved_parent_document_ids_before_dedup": null,
+          "unique_retrieved_parent_document_ids": null,
+          "true_positive_document_ids": null,
+          "retrieval_identity_detail_status": "not_provided_in_external_validation_summary",
+          "true_positives": 1,
+          "precision_numerator": 1,
+          "precision_denominator": 2,
+          "precision": 0.5,
+          "recall_numerator": 1,
+          "recall_denominator": 1,
+          "recall": 1.0
+        },
+        {
+          "query_id": "Q5",
+          "query": "How should customers be informed during a widespread outage?",
+          "strategy": "sentence",
+          "relevant_document_ids": ["KB-011"],
+          "raw_retrieved_chunk_ids": null,
+          "retrieved_parent_document_ids_before_dedup": null,
+          "unique_retrieved_parent_document_ids": null,
+          "true_positive_document_ids": null,
+          "retrieval_identity_detail_status": "not_provided_in_external_validation_summary",
+          "true_positives": 1,
+          "precision_numerator": 1,
+          "precision_denominator": 2,
+          "precision": 0.5,
+          "recall_numerator": 1,
+          "recall_denominator": 1,
+          "recall": 1.0
+        }
+      ],
+      "aggregate": {
+        "mean_precision": 0.6,
+        "mean_recall": 1.0
+      },
+      "critical_rank_one_hits": 1,
+      "irrelevant_parent_document_count": 4
+    }
+  },
+  "production_strategy_recommendation": {
+    "status": "recommended_external_validation",
+    "strategy": "sentence",
+    "threshold": 0.33928388357162476,
+    "metrics": {
+      "mean_precision": 0.6,
+      "mean_recall": 1.0
+    },
+    "reason": "Mean recall tied at 1.0. Sentence is recommended because its mean precision is 0.60 versus fixed at 0.40; use the sentence calibration threshold 0.33928388357162476."
+  },
+  "external_validation": {
+    "full_test_suite": "68 passed",
+    "test_suite_ran_inside_replit": false
+  }
+}

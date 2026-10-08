@@ -1,0 +1,98 @@
+CrewAI demo transcript — Replit environment
+
+Result:
+- CrewAI imported: false
+- crew.kickoff() executed: no
+- CrewAI-mediated RAG tool calls: 0
+- CrewAI-mediated ticket tool calls: 0
+
+Policy request
+- Route selected: policy
+- Run status: blocked_dependency
+- kickoff_called: false
+- Tool invocations recorded: 0
+- Blocker: ModuleNotFoundError: No module named 'crewai'
+
+Ticket request: Check status of TKT-0007.
+- Route selected: ticket
+- Run status: blocked_dependency
+- kickoff_called: false
+- Tool invocations recorded: 0
+- Blocker: ModuleNotFoundError: No module named 'crewai'
+
+Ticket follow-up in the same session: Should that ticket be escalated?
+- Route selected: ticket using session A's TKT-0007 reference
+- Run status: blocked_dependency
+- kickoff_called: false
+- Tool invocations recorded: 0
+
+Ticket follow-up in a new session
+- Route selected: fallback
+- Run status: missing_ticket_context
+- Safe response: request a ticket ID
+- kickoff_called: false
+- Tool invocations recorded: 0
+
+Package installation resolved CrewAI 1.15.25, but its required ChromaDB 1.5.9
+wheel received HTTP 403 from Replit's package firewall. The real crew flows
+were not simulated or reported as successful.
+
+Direct adapter unit-test evidence (not a CrewAI kickoff):
+- RAGLookupTool._run called once with a policy query and recorded one completed
+  invocation; its existing grounded-generation function was monkeypatched in
+  that unit test.
+- TicketStatusTool._run called the existing dataset-backed lookup for
+  TKT-0007 and recorded one completed invocation.
+
+External local run supplied before Batch B1.1 hardening:
+- CrewAI 1.15.25 and ChromaDB 1.5.9 were installed.
+- The reported suite result was 92 passed, 3 failed, 1 skipped; the three
+  failing crew/session cases returned response=None.
+- This is a failed pre-hardening run, not evidence of a successful CrewAI
+  kickoff. External validation after the native-tool-flow fix is pending.
+
+Batch B1.1 Replit verification:
+- Replit-safe suite: 100 passed, 2 skipped, 4 warnings.
+- `python -m scripts.validate_crewai_runtime` printed all four cases.
+- Policy, ticket, and session A follow-up stopped at
+  `stage=crew_construction` because `crewai` is not installed; no kickoff or
+  tool call occurred. Session B isolation returned a valid fallback response.
+- Diagnostic exit code: 1, correctly indicating the blocked integration cases.
+
+Batch B1.1.1 local validation supplied by the user:
+- 105 passed, 1 failed, 1 skipped.
+- The real ticket kickoff, one `ticket_status_lookup`, Pydantic response,
+  session A follow-up, and session B isolation passed.
+- Only the real policy crew failed after invoking `rag_lookup`; the reported
+  parser error was `stage=mock_llm_tool_result` with invalid JSON at character
+  zero. The raw tool-result message was not included, so its exact content
+  could not be determined from that report.
+
+Batch B1.1.1 Replit changes:
+- `lookup_policy` projects JSON-safe evidence including top-one document and
+  chunk IDs; the CrewAI adapter returns strict JSON text.
+- The MockLLM parser accepts actual mappings, Pydantic models, bytes, JSON
+  strings, one JSON fence, and a JSON object framed by a real tool-result
+  message. Parse errors include a 300-character preview of only that result.
+- Replit-safe suite before answer-selection regression tests: 106 passed,
+  2 skipped, 4 warnings.
+
+Batch B local policy answer-selection report supplied by the user:
+- Suite result: 111 passed, 1 failed, 1 skipped.
+- The real policy kickoff completed with one `rag_lookup` call, a grounded
+  response, and source KB-002; its answer contained only the generic SLA
+  explanation, not the numeric P1 targets.
+- The report did not include the raw production top-five chunks.
+
+Replit answer-selection investigation:
+- Direct production retrieval could not run because ChromaDB is not installed
+  and there is no persisted `chroma_db` index in this workspace.
+- Exhaustive cosine ranking over the 27 current sentence chunks using the
+  cached production embedding model placed these chunks in the top five:
+  KB-003-sentence-000, KB-003-sentence-001, KB-002-sentence-002,
+  KB-001-sentence-000, and KB-010-sentence-000.
+- The numeric P1 sentence was absent from that reconstructed top five. This is
+  not a direct query of the external Chroma HNSW index.
+- Regression tests cover selection when the numeric sentence is among
+  retrieved chunks and no numeric invention when it is absent.
+- Replit-safe suite after these tests: 108 passed, 2 skipped, 4 warnings.

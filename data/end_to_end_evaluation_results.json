@@ -1,0 +1,515 @@
+{
+  "evaluation": "support_agent_end_to_end",
+  "status": "completed",
+  "total_queries": 15,
+  "case_count": 15,
+  "pass_count": 15,
+  "fail_count": 0,
+  "blocked_count": 0,
+  "averages": {
+    "accuracy": 1.0,
+    "grounding": 1.0,
+    "completeness": 1.0,
+    "safety": 1.0
+  },
+  "average_accuracy": 1.0,
+  "average_grounding": 1.0,
+  "average_completeness": 1.0,
+  "average_safety": 1.0,
+  "per_query_results": [
+    {
+      "query_id": "Q1",
+      "query": "A payment failure has made the service completely unavailable for everyone. What priority is this?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-001"
+      ],
+      "required_phrases": [
+        "P1 Critical"
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-001"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-001",
+          "chunk_id": "KB-001-sentence-000",
+          "similarity": 0.5076902508735657,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "P1 Critical applies to a service-wide outage, an account-security incident, or a payment charge when the service is completely unavailable.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q2",
+      "query": "What is the initial response deadline and target resolution time for a P1 critical ticket?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-002"
+      ],
+      "required_phrases": [
+        "15 minutes",
+        "4 hours"
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-002"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-002",
+          "chunk_id": "KB-002-sentence-000",
+          "similarity": 0.7271111607551575,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "For P1, the initial response is due within 15 minutes and the target resolution time is within 4 hours.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q3",
+      "query": "Who receives an immediate escalation for a P1 ticket?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-003"
+      ],
+      "required_phrases": [
+        "Incident Manager",
+        "immediately"
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-003"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-003",
+          "chunk_id": "KB-003-sentence-000",
+          "similarity": 0.7001044750213623,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "Escalate P1 tickets immediately to the Incident Manager.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q4",
+      "query": "A verified duplicate charge was taken from my account. Can it qualify for a full refund?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-004"
+      ],
+      "required_phrases": [
+        "full refund",
+        "verification"
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-004"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-004",
+          "chunk_id": "KB-004-sentence-000",
+          "similarity": 0.7817394137382507,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "Duplicate or clearly incorrect charges may qualify for a full refund after verification.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q5",
+      "query": "What is the primary customer support channel?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-005"
+      ],
+      "required_phrases": [
+        "In-app support is the primary customer support channel."
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-005"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-005",
+          "chunk_id": "KB-005-sentence-000",
+          "similarity": 0.595639169216156,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "In-app support is the primary customer support channel.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q6",
+      "query": "How often are P1 critical incidents monitored?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-006"
+      ],
+      "required_phrases": [
+        "24 hours a day, 7 days a week"
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-006"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-006",
+          "chunk_id": "KB-006-sentence-000",
+          "similarity": 0.704736053943634,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "P1 critical incidents are monitored 24 hours a day, 7 days a week.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q7",
+      "query": "How many customer contacts about the same unresolved issue trigger an escalation review?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-007"
+      ],
+      "required_phrases": [
+        "Three customer contacts"
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-007"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-007",
+          "chunk_id": "KB-007-sentence-001",
+          "similarity": 0.8749322891235352,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "Three customer contacts about the same unresolved issue trigger an escalation review.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q8",
+      "query": "Can a support agent approve a service credit independently?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-008"
+      ],
+      "required_phrases": [
+        "may not approve it independently"
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-008"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-008",
+          "chunk_id": "KB-008-sentence-001",
+          "similarity": 0.7168229818344116,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "Support agents may recommend an exceptional credit but may not approve it independently.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q9",
+      "query": "Does negative feedback automatically reopen a support ticket?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-009"
+      ],
+      "required_phrases": [
+        "Negative feedback does not automatically reopen a ticket."
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-009"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-009",
+          "chunk_id": "KB-009-sentence-001",
+          "similarity": 0.8618823885917664,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "Negative feedback does not automatically reopen a ticket.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q10",
+      "query": "Does VIP status allow an agent to bypass privacy, safety, or refund rules?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-010"
+      ],
+      "required_phrases": [
+        "VIP",
+        "does not override"
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-010"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-010",
+          "chunk_id": "KB-010-sentence-000",
+          "similarity": 0.6671757102012634,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "VIP status changes response prioritisation but does not override safety, refund, privacy, or fraud controls.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q11",
+      "query": "How should the first customer message handle an estimated restoration time during a widespread outage?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-011"
+      ],
+      "required_phrases": [
+        "without inventing an estimated time of arrival"
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-011"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-011",
+          "chunk_id": "KB-011-sentence-000",
+          "similarity": 0.6068702936172485,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "Initial customer communication should acknowledge the issue without inventing an estimated time of arrival.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q12",
+      "query": "For how many days are fabricated capstone ticket records retained after closure?",
+      "expected_route": "policy",
+      "expected_document_ids": [
+        "KB-012"
+      ],
+      "required_phrases": [
+        "180 days after closure"
+      ],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "policy",
+      "actual_document_ids": [
+        "KB-012"
+      ],
+      "actual_sources": [
+        {
+          "document_id": "KB-012",
+          "chunk_id": "KB-012-sentence-000",
+          "similarity": 0.8146551251411438,
+          "retrieval_origin": "vector_search"
+        }
+      ],
+      "actual_answer": "Retain fabricated capstone ticket records for 180 days after closure for operational review.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q13",
+      "query": "Can you recommend a recipe for dinner?",
+      "expected_route": "fallback",
+      "expected_document_ids": [],
+      "required_phrases": [
+        "I don't know based on the available support policies."
+      ],
+      "expected_answer": "I don't know based on the available support policies.",
+      "expected_grounded": false,
+      "expected_fallback": true,
+      "actual_route": "fallback",
+      "actual_document_ids": [],
+      "actual_sources": [],
+      "actual_answer": "I don't know based on the available support policies.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q14",
+      "query": "What is tomorrow's cricket score?",
+      "expected_route": "fallback",
+      "expected_document_ids": [],
+      "required_phrases": [
+        "I don't know based on the available support policies."
+      ],
+      "expected_answer": "I don't know based on the available support policies.",
+      "expected_grounded": false,
+      "expected_fallback": true,
+      "actual_route": "fallback",
+      "actual_document_ids": [],
+      "actual_sources": [],
+      "actual_answer": "I don't know based on the available support policies.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    },
+    {
+      "query_id": "Q15",
+      "query": "Check the status of ticket TKT-0007. My phone number is 9876543210.",
+      "expected_route": "ticket",
+      "expected_document_ids": [],
+      "required_phrases": [],
+      "expected_answer": null,
+      "expected_grounded": true,
+      "expected_fallback": false,
+      "actual_route": "ticket",
+      "actual_document_ids": [],
+      "actual_sources": [],
+      "actual_answer": "Ticket TKT-0007 is In Progress, has a resolution time of 93 hours, is 13 days old, and escalation is recommended.",
+      "scores": {
+        "accuracy": 1.0,
+        "grounding": 1.0,
+        "completeness": 1.0,
+        "safety": 1.0
+      },
+      "failure_reasons": [],
+      "status": "passed"
+    }
+  ]
+}

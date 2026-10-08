@@ -1,0 +1,42 @@
+{
+  "ticket_count": 50,
+  "escalated_flag_counts": {
+    "true": 10,
+    "false": 40
+  },
+  "days_since_created": {
+    "min": 0,
+    "max": 30,
+    "median": 15.0,
+    "p80": 25.0,
+    "percentile_method": "nearest_rank",
+    "p80_rank_1_based": 40
+  },
+  "escalation_score_distribution": {
+    "min": 0.0,
+    "max": 1.0,
+    "median": 0.22166666666666665,
+    "p80": 0.35,
+    "p80_rank_1_based": 40,
+    "recommended_count": 7,
+    "eligible_ticket_count": 17,
+    "not_recommended_eligible_count": 10,
+    "score_at_or_above_threshold_count": 18,
+    "ineligible_status_count": 33
+  },
+  "score_formula": "0.65 * int(escalated) + 0.35 * (days_since_created / 30)",
+  "weights": {
+    "escalated_flag": 0.65,
+    "normalized_age": 0.35,
+    "sum": 1.0
+  },
+  "age_normalization": "days_since_created / 30",
+  "recommendation_threshold": 0.2916666666666667,
+  "recommendation_threshold_derivation": {
+    "age_p80_days": 25.0,
+    "normalized_age_signal": 0.8333333333333334,
+    "age_weight": 0.35,
+    "expression": "0.35 * (25 / 30)"
+  },
+  "recommendation_rule": "For Open and In Progress tickets, recommend escalation when the score reaches the age-weighted nearest-rank 80th percentile; exclude tickets already Escalated, Resolved, or Closed."
+}

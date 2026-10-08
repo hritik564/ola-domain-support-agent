@@ -1,0 +1,16 @@
+Batch D normalized cache demo
+Storage: process-local bounded LRU; keys are SHA-256 hashes.
+First policy lookup: hit=false, answer=deterministic answer for what is the p1 sla?
+First cache size: 1
+Whitespace/case-normalized repeat: hit=true, answer=deterministic answer for what is the p1 sla?
+Normalized query uses same hashed key: True
+Cache size after normalized hit: 1
+Different query: hit=false, answer=deterministic answer for what is the p2 sla?
+Cache size after different query: 2
+First key SHA-256 prefix: 19d07fa14709
+Underlying deterministic lookup calls: 2
+PII request bypass: True (pii_detected)
+Session-reference request bypass: True (session_reference_present)
+Different session receives a different key: True
+Ticket IDs and session-dependent references are not cached.
+No raw normalized query is stored in the cache key.

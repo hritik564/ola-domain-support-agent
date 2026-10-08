@@ -1,0 +1,24 @@
+Ola Domain Support Agent — final acceptance
+Environment: local validation runtime
+Secrets, prompts, raw queries, and raw PII are not printed.
+
+PASS: Dataset distribution — 50 deterministic tickets; escalated=10 (20.0%); required category and status checks passed.
+PASS: Knowledge base and chunk generation — 12 validated documents; 14 fixed chunks and 27 sentence chunks.
+PASS: Local SentenceTransformers embedding — sentence-transformers/all-MiniLM-L6-v2; dimension=384; finite=true.
+PASS: Chroma index counts — ola_support_fixed=14; ola_support_sentence=27.
+PASS: Retrieval calibration and evaluation — both strategy thresholds separated; 5 queries evaluated; recommended=sentence.
+PASS: CrewAI runtime validation — real policy, ticket, same-session follow-up, and isolation checks passed.
+PASS: 15-query end-to-end evaluation — 15 cases; passed=15, failed=0, dependency-blocked=0.
+PASS: AutoGen review demo — offline two-role review preserved an approved answer and corrected an unsupported draft.
+PASS: Cache demo — deterministic local demo completed and transcript refreshed.
+PASS: Governance demo — deterministic local demo completed and transcript refreshed.
+PASS: Budget demo — deterministic local demo completed and transcript refreshed.
+PASS: Submission documentation and evidence — 32 README sections, 46 rubric rows, and all nine required transcripts exist.
+PASS: Full pytest suite — 171 passed, 1 skipped, 324 warnings in 4.73s
+PASS: Replit-safe pytest suite — 166 passed, 1 skipped, 324 warnings in 4.15s; Chroma-dependent modules excluded explicitly.
+PASS: Installed dependency consistency — No broken requirements found.
+
+Overall: PASS
+Failed checks: 0
+Dependency-blocked checks: 0
+Runner exit code: 0

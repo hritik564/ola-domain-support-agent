@@ -1,0 +1,148 @@
+[
+  {
+    "query_id": "Q1",
+    "query": "A payment failure has made the service completely unavailable for everyone. What priority is this?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-001"],
+    "required_phrases": ["P1 Critical"],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q2",
+    "query": "What is the initial response deadline and target resolution time for a P1 critical ticket?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-002"],
+    "required_phrases": ["15 minutes", "4 hours"],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q3",
+    "query": "Who receives an immediate escalation for a P1 ticket?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-003"],
+    "required_phrases": ["Incident Manager", "immediately"],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q4",
+    "query": "A verified duplicate charge was taken from my account. Can it qualify for a full refund?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-004"],
+    "required_phrases": ["full refund", "verification"],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q5",
+    "query": "What is the primary customer support channel?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-005"],
+    "required_phrases": ["In-app support is the primary customer support channel."],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q6",
+    "query": "How often are P1 critical incidents monitored?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-006"],
+    "required_phrases": ["24 hours a day, 7 days a week"],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q7",
+    "query": "How many customer contacts about the same unresolved issue trigger an escalation review?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-007"],
+    "required_phrases": ["Three customer contacts"],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q8",
+    "query": "Can a support agent approve a service credit independently?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-008"],
+    "required_phrases": ["may not approve it independently"],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q9",
+    "query": "Does negative feedback automatically reopen a support ticket?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-009"],
+    "required_phrases": ["Negative feedback does not automatically reopen a ticket."],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q10",
+    "query": "Does VIP status allow an agent to bypass privacy, safety, or refund rules?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-010"],
+    "required_phrases": ["VIP", "does not override"],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q11",
+    "query": "How should the first customer message handle an estimated restoration time during a widespread outage?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-011"],
+    "required_phrases": ["without inventing an estimated time of arrival"],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q12",
+    "query": "For how many days are fabricated capstone ticket records retained after closure?",
+    "expected_route": "policy",
+    "expected_document_ids": ["KB-012"],
+    "required_phrases": ["180 days after closure"],
+    "expected_grounded": true,
+    "expected_fallback": false
+  },
+  {
+    "query_id": "Q13",
+    "query": "Can you recommend a recipe for dinner?",
+    "expected_route": "fallback",
+    "expected_document_ids": [],
+    "required_phrases": ["I don't know based on the available support policies."],
+    "expected_grounded": false,
+    "expected_fallback": true,
+    "expected_answer": "I don't know based on the available support policies."
+  },
+  {
+    "query_id": "Q14",
+    "query": "What is tomorrow's cricket score?",
+    "expected_route": "fallback",
+    "expected_document_ids": [],
+    "required_phrases": ["I don't know based on the available support policies."],
+    "expected_grounded": false,
+    "expected_fallback": true,
+    "expected_answer": "I don't know based on the available support policies."
+  },
+  {
+    "query_id": "Q15",
+    "query": "Check the status of ticket TKT-0007. My phone number is 9876543210.",
+    "expected_route": "ticket",
+    "expected_document_ids": [],
+    "required_phrases": [],
+    "expected_grounded": true,
+    "expected_fallback": false,
+    "must_mask_pii": true,
+    "expected_ticket_fields": {
+      "record_id": "TKT-0007",
+      "ticket_status": "In Progress",
+      "resolution_time_hours": 93,
+      "ticket_age_days": 13,
+      "escalation_score": 0.8016666666666667,
+      "escalation_recommended": true
+    }
+  }
+]

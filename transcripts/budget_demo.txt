@@ -1,0 +1,37 @@
+Batch D request-budget demo
+Token estimate: ceil(input characters / 4).
+Output estimate: reserve the configured output-token limit.
+Cost estimate uses illustrative local accounting rates, not provider billing.
+Input rate per 1M tokens (USD): 0.15
+Output rate per 1M tokens (USD): 0.6
+
+ALLOWED REQUEST
+allowed: true
+estimated_input_tokens: 5
+estimated_output_tokens: 256
+estimated_total_tokens: 261
+actual_output_tokens: 26
+actual_total_tokens: 31
+estimated_cost_usd: 0.00015435
+actual_paid_cost_usd: 0.0
+
+OVERSIZED REQUEST
+allowed: false
+reason: input_token_budget_exceeded
+estimated_input_tokens: 525
+
+OUTPUT OVERSIZE
+allowed: false
+reason: output_token_budget_exceeded
+actual_output_tokens: 257
+
+RUNTIME OBSERVATION
+elapsed_ms: 30250.0
+runtime_budget_exceeded: true
+Runtime overage is logged; synchronous work is not interrupted.
+
+Configured limits:
+max_input_tokens: 512
+max_output_tokens: 256
+max_total_tokens: 768
+max_runtime_ms: 30000.0
